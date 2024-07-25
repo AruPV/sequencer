@@ -5,8 +5,8 @@ import PianoRoll from "./piano-roll";
 
 
 export default function Sequencer(){
-	const beatsPerMeasure = 8;
-	const measureCount = 8;
+	const beatsPerMeasure = 4;
+	const measureCount = 4;
 	const [isPlaying, setIsPlaying] = useState(false);
 	console.log("Sequencer Loaded");
 	const initialSteps = Array(beatsPerMeasure*measureCount).fill([]);
@@ -39,6 +39,7 @@ export default function Sequencer(){
       </Track>
     </Song>
 		<PianoRoll setSteps={pianoRollCallbackFunction}></PianoRoll>
+		<p>{steps}</p>
 		</>
 	)
 
